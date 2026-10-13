@@ -1,6 +1,6 @@
 # 姜崃漫游
 游戏版本：AMD#1.0（2026-10-13）。
-[在线试玩](https://skrikkk.github.io/Forking-Paths-To-The-Future/) · [小红书手机横屏版 ZIP 下载](https://skrikkk.github.io/Forking-Paths-To-The-Future/releases/)
+[在线试玩](https://skrikkk.github.io/jianglai-vn-demo/dist/index.html) · [小红书手机横屏版 ZIP 下载](https://skrikkk.github.io/jianglai-vn-demo/releases/)
 
 ----------------------
 **小径分岔的未来**
