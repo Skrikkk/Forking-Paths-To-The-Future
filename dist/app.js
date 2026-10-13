@@ -1,8 +1,8 @@
-/* 小型姜崃漫游 H5 功能Demo · 261013 AMD#33 */
+/* 小型姜崃漫游 H5 功能Demo · 261013 AMD#35 */
 (() => {
   "use strict";
 
-  const APP_VERSION = "261013 AMD#33";
+  const APP_VERSION = "261013 AMD#35";
   const STORAGE_KEY = "jianglai-vn-demo-player-v1";
   const LOG_KEY = "jianglai-vn-demo-debug-log-v1";
   const ENDINGS = ["E1", "E2", "E3", "E4"];
@@ -81,7 +81,7 @@
 };
 
   const NODE_NAMES = {
-    menu: "主菜单", INTRO: "前言过渡", ABOUT_OPENING:"开场介绍", E5_FINAL:"真正的世界最终画面", P1: "初次前言", L: "卢卡", C: "ChiChi", S: "学生1", R: "Richard", A: "阿辽沙", AN: "安欣", P2: "二阶段前言", TE_IDENTITY: "TE：身份选择", TE_ERASE: "TE：擦除互动", TE_EMPTY: "TE：没有别的选项", TE_LAST: "TE：还有最后一个", TE_YOU: "TE：最后选项", TE_FINAL: "TE：你成为你", E1: "结局1", E2: "结局2", E3: "结局3", E4: "结局4", E5: "真正的世界",
+    menu: "主菜单", INTRO: "前言过渡", E5_FINAL:"真正的世界最终画面", P1: "初次前言", L: "卢卡", C: "ChiChi", S: "学生1", R: "Richard", A: "阿辽沙", AN: "安欣", P2: "二阶段前言", TE_IDENTITY: "TE：身份选择", TE_ERASE: "TE：擦除互动", TE_EMPTY: "TE：没有别的选项", TE_LAST: "TE：还有最后一个", TE_YOU: "TE：最后选项", TE_FINAL: "TE：你成为你", E1: "结局1", E2: "结局2", E3: "结局3", E4: "结局4", E5: "真正的世界",
   };
 
   const app = document.querySelector("#app");
@@ -206,10 +206,12 @@
     try {
       const saved = JSON.parse(localStorage.getItem(STORAGE_KEY));
       const result = { ...blankState(), ...(saved || {}), settings: { ...blankState().settings, ...(saved?.settings || {}) } };
+      if(result.node==='ABOUT_OPENING'){result.node='P1';result.page=0;}
+      if(result.resumeNode==='ABOUT_OPENING'){result.resumeNode='P1';result.resumePage=0;}
       result.visited = [...new Set([...(Array.isArray(saved?.visited) ? saved.visited : []), ...(result.endings || []), result.node])];
       result.seenEdges = Array.isArray(saved?.seenEdges) ? saved.seenEdges : [];
       result.chosenChoices = Array.isArray(saved?.chosenChoices) ? saved.chosenChoices : [];
-      result.birthdayMusicStarted = !!result.birthdayMusicStarted || result.visited.includes('E5') || result.visited.includes('E5_FINAL');
+      result.birthdayMusicStarted = typeof saved?.birthdayMusicStarted === 'boolean' ? saved.birthdayMusicStarted : result.visited.includes('E5') || result.visited.includes('E5_FINAL');
       return result;
     } catch (_) {
       storageOK = false;
@@ -249,9 +251,9 @@
   }
 
   function go(node, { action = "系统", recordEnding = true, remember = true, page = 0, trace = true } = {}) {
+    if(node==='ABOUT_OPENING'){node='P1';page=0;}
     flowFromEnding=false;
     const from = state.node;
-    const screenFade = (node === 'ABOUT_OPENING' || from === 'ABOUT_OPENING') && !reducedMotion() ? app.querySelector('.app-shell').cloneNode(true) : null;
     if(node!==from){clearTimeout(foolTimer);foolPhase='';}
     const fadingPage = ENDINGS.includes(node) && from !== node && !reducedMotion() ? app.querySelector('.game-stage').cloneNode(true) : null;
     if(ENDINGS.includes(node) || node==='E5_FINAL'){endingStartedAt=Date.now();endingReady=false;}
@@ -281,7 +283,6 @@
     log(from, action, node);
     saveState();
     render();
-    if(screenFade) dissolveScreen(screenFade,900);
     if(fadingPage){fadingPage.className='ending-previous';fadingPage.setAttribute('aria-hidden','true');fadingPage.removeAttribute('data-node');app.querySelector('.game-stage').appendChild(fadingPage);setTimeout(()=>fadingPage.remove(),1000);}
   }
 
@@ -293,8 +294,9 @@
   }
 
   async function beginExperience() {
-    const target = ordinaryEndingComplete() ? "P2" : !state.openingSeen && !state.visited.includes('P1') ? 'ABOUT_OPENING' : "P1";
-    if(target==='ABOUT_OPENING')state.openingSeen=true;
+    birthdayMusicStarted=false;
+    state.birthdayMusicStarted=false;
+    const target = ordinaryEndingComplete() ? "P2" : "P1";
     state.richardBird = false;
     state.alyoshaFool = false;
     go(target, { action: "开始体验" });
@@ -386,7 +388,6 @@
 
   function renderScreen(node) {
     if (node === "menu") return renderMenu();
-    if (node === 'ABOUT_OPENING') return renderDialoguePage({content:ABOUT_COPY.replace('<div class="about-copy">','').replace('</div>','')});
     if (node === 'E5_FINAL') return renderFinalEnding();
     if (node === 'INTRO') return renderIntro();
     if (isEnding(node)) return renderEnding(node);
@@ -531,17 +532,17 @@
   }
 
   function usesScreenAdvance() {
-    return ['ABOUT_OPENING','P1','P2','TE_IDENTITY','TE_ERASE','TE_EMPTY','TE_FINAL','E5'].includes(state.node);
+    return ['P1','P2','TE_IDENTITY','TE_ERASE','TE_EMPTY','TE_FINAL','E5'].includes(state.node);
   }
   function nextScreenNode() {
     if (state.node === 'TE_ERASE' && eraseState().done.length === 6) return 'TE_EMPTY';
     if (state.node === 'TE_IDENTITY' && state.teChosen.length === 6) return 'TE_ERASE';
-    return {ABOUT_OPENING:'P1',TE_EMPTY:'TE_LAST',TE_FINAL:'E5',E5:'E5_FINAL'}[state.node];
+    return {TE_EMPTY:'TE_LAST',TE_FINAL:'E5',E5:'E5_FINAL'}[state.node];
   }
 
   function renderDialoguePage({ speaker, content, controls = "", note = "" }) {
     note="";
-    const pages = state.node==='ABOUT_OPENING' ? [content] : splitReadingPages(content, true, false, controls, note);
+    const pages = splitReadingPages(content, true, false, controls, note);
     currentPageCount = pages.length;
     state.page = Math.max(0, Math.min(Number.isInteger(state.page) ? state.page : 0, pages.length - 1));
     content = pages[state.page];
@@ -550,7 +551,7 @@
     const image = art
       ? `<div class="art-paper" data-action="view-art" role="button" tabindex="0" aria-label="放大查看${escapeHtml(art[1])}插画"><div class="art-deckle"><img class="scene-art" src="assets/scenes/${art[0]}" alt="${escapeHtml(art[1])}的剧情插画" /></div></div>`
       : `<div class="scene-placeholder" aria-hidden="true"><span>小径分岔的花园</span></div>`;
-    return `<div class="play-area book-view ${["P1", "P2", "ABOUT_OPENING"].includes(state.node) ? "preface-view" : ""} ${usesScreenAdvance()?'screen-advance':''} ${state.node==='TE_IDENTITY' && state.teChosen.length<6?'identity-pending':''}">${["P1","P2","ABOUT_OPENING"].includes(state.node)?"":`<nav class="book-rail" aria-label="游戏操作">
+    return `<div class="play-area book-view ${["P1", "P2"].includes(state.node) ? "preface-view" : ""} ${usesScreenAdvance()?'screen-advance':''} ${state.node==='TE_IDENTITY' && state.teChosen.length<6?'identity-pending':''}">${["P1","P2"].includes(state.node)?"":`<nav class="book-rail" aria-label="游戏操作">
       <button class="nav-tab nav-save" data-action="save" aria-label="存档" title="存档">存档</button>
       <button class="nav-tab nav-read" data-action="flow" aria-label="读档" title="读档">读档</button>
       <button class="nav-tab nav-settings" data-action="settings" aria-label="设置" title="设置">设置</button>
@@ -670,7 +671,7 @@
       if (next) {
         turnLocked=true;
         go(next,{action:state.node==='TE_IDENTITY'?'六项身份完成，点击继续':'点击屏幕继续'});
-        if(next!=='P1' || reducedMotion())setTimeout(()=>{turnLocked=false;},260);
+        setTimeout(()=>{turnLocked=false;},260);
       }
       return;
     }
@@ -748,7 +749,7 @@
     app.querySelectorAll('[data-slot-load]').forEach(button=>button.addEventListener('click',()=>{
       const slot=readSlots()[Number(button.dataset.slotLoad)];if(!slot)return;
       const current=loadState(),saved=slot.state;
-      state={...blankState(),...JSON.parse(JSON.stringify(saved)),settings:current.settings,birthdayMusicStarted:birthdayMusicStarted||current.birthdayMusicStarted||saved.birthdayMusicStarted,endings:[...new Set([...current.endings,...saved.endings])],visited:[...new Set([...current.visited,...saved.visited])],seenEdges:[...new Set([...current.seenEdges,...saved.seenEdges])],chosenChoices:[...new Set([...current.chosenChoices,...(saved.chosenChoices||[])])]};
+      state={...blankState(),...JSON.parse(JSON.stringify(saved)),settings:current.settings,birthdayMusicStarted:birthdayMusicStarted||current.birthdayMusicStarted,endings:[...new Set([...current.endings,...saved.endings])],visited:[...new Set([...current.visited,...saved.visited])],seenEdges:[...new Set([...current.seenEdges,...saved.seenEdges])],chosenChoices:[...new Set([...current.chosenChoices,...(saved.chosenChoices||[])])]};
       debugProfile=null;modal=null;pageHistory=[];playClock=Date.now();
       const target=state.resumeNode||state.node,page=state.resumeNode?state.resumePage:state.page;
       go(target,{page,recordEnding:false,remember:false,trace:false,action:'读取手动存档'});

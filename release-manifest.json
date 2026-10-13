@@ -1,10 +1,10 @@
 {
-  "version": "261013 AMD#33",
+  "version": "261013 AMD#1.0",
   "date": "2026-10-13",
   "smallredPackage": {
-    "name": "姜崃漫游-小红书手机横屏版-261013-AMD33.zip",
-    "bytes": 4573247,
-    "sha256": "d39663f9f605e721bb005cb5ee72531008807e81b186eee8d7a8a5455511577b",
+    "name": "姜崃漫游-小红书手机横屏版-261013-AMD35.zip",
+    "bytes": 4573000,
+    "sha256": "8662cddcf804edb8a1d845592c244bd2a8c28f55d62fe6da7e3bb0199b187294",
     "download": "releases/"
   },
   "files": [
@@ -15,13 +15,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 1298,
-      "sha256": "2d8aa5799c7f524fc7adf72d37a6d13eab8448f063c5f8797c379a9090531adf"
+      "bytes": 1081,
+      "sha256": "00ef227421da4201db49194793e78d1e4801f125c10a70f4578b50ab756fe952"
     },
     {
       "path": "dist/app.js",
-      "bytes": 87680,
-      "sha256": "e027df04f11ce6bd630612a61aeec70e326dfc048d89b18419a770bc06b6acec"
+      "bytes": 87331,
+      "sha256": "863e67a99076a5c720f348516b8e68a98f0c5d573df20a983804ec44dca63692"
     },
     {
       "path": "dist/assets/audio/garden.mp3",
@@ -191,7 +191,7 @@
     {
       "path": "dist/index.html",
       "bytes": 673,
-      "sha256": "ff4da2f6fe1c936e3764d87ceb943cce140d9f0e4a8985d54537c354ca940f3d"
+      "sha256": "e7c46644ff402694b425efb39bc48068399e0a37aae7b5dd493dab80f613953a"
     },
     {
       "path": "dist/name-ink.js",
@@ -205,8 +205,8 @@
     },
     {
       "path": "dist/ui-261006.css",
-      "bytes": 46401,
-      "sha256": "316ca1936b2fad976ecbecc755a7712eeb8904d2b023abd466b62eb48e12301a"
+      "bytes": 45315,
+      "sha256": "91b91f47538ac327ae433207fb2926096104c72d815456481f651b7e4d78f785"
     },
     {
       "path": "index.html",
@@ -215,18 +215,18 @@
     },
     {
       "path": "releases/index.html",
-      "bytes": 1972,
-      "sha256": "7e4bdef4408fff56181a965443d2fd9dce99f65622178edd84d41f21ba8ad191"
+      "bytes": 1973,
+      "sha256": "0f3574b96fb940d6160c2930072560952fb57423eeb7e700ca2b38165dc4a9cb"
     },
     {
-      "path": "releases/minitool-261013-AMD33.zip.part1",
+      "path": "releases/minitool-261013-AMD35.zip.part1",
       "bytes": 2250000,
-      "sha256": "b7e921e8b0bf6195bdc0cc9c44d488a3186b89121778e43e9fdd97440ce2e0ed"
+      "sha256": "2f86112a31305e494bd2ccafc15de3df559d2cfb5d749d3e06c2bdc9e75c1488"
     },
     {
-      "path": "releases/minitool-261013-AMD33.zip.part2",
-      "bytes": 2323247,
-      "sha256": "d6a210574665d8909bc25ae055384819d1fd919a6ef4ea7fdb071271d614827e"
+      "path": "releases/minitool-261013-AMD35.zip.part2",
+      "bytes": 2323000,
+      "sha256": "cc2a5f9e0a57453bf97f4e3bf4ece834d2dea7f873380781366408954c88dcf4"
     }
   ]
 }

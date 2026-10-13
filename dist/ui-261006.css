@@ -457,9 +457,6 @@ body,.app-shell {min-height:var(--viewport-height,100vh);}
 .preface-view .reading-hint{color:#eee8d4;}
 .game-stage[data-node="TE_IDENTITY"] .reading-navigation>span{display:none;}
 .erase-status{display:none;}
-.game-stage[data-node="ABOUT_OPENING"] .preface-view{background:#050505 url("assets/ui/intro-ground.png") center/256px 256px repeat;}
-.game-stage[data-node="ABOUT_OPENING"] .text-page{left:20%;top:15%;width:60%;height:72%;}
-.game-stage[data-node="ABOUT_OPENING"] .story-copy{color:#eee8d4;}
 .fool-out{animation:fool-hide 240ms ease-in-out both;animation-delay:var(--fool-elapsed,0ms);pointer-events:none;}
 .fool-in{animation:ending-reveal 1600ms ease-in-out both;animation-delay:var(--fool-elapsed,0ms);pointer-events:none;}
 @keyframes fool-hide{from{opacity:1;}to{opacity:0;}}
@@ -467,12 +464,6 @@ body,.app-shell {min-height:var(--viewport-height,100vh);}
 .final-cinema .ending-copy{margin-top:4%;font-size:calc(var(--stage-unit,1vw)*1.8);}
 
 /* 261013 AMD#33: single opening page and screen dissolves. */
-.game-stage[data-node="ABOUT_OPENING"] .preface-view{background:#bcbcbc url("assets/scenes/ending-paper.png") center/cover no-repeat;}
-.game-stage[data-node="ABOUT_OPENING"] .text-page{left:14%;top:7%;width:72%;height:83%;padding:calc(var(--stage-unit,1vw)*1.5) calc(var(--stage-unit,1vw)*2.5);background:rgba(238,235,226,.86);box-shadow:0 0 calc(var(--stage-unit,1vw)*4) rgba(238,235,226,.55);}
-.game-stage[data-node="ABOUT_OPENING"] .story-copy{color:#272624;font-size:calc(var(--stage-unit,1vw)*1.5);line-height:1.65;}
-.game-stage[data-node="ABOUT_OPENING"] .story-copy h3{text-align:center;font-size:1.35em;font-weight:400;margin:0 0 .4em;}
-.game-stage[data-node="ABOUT_OPENING"] .story-copy p{margin:0 0 .65em;}
-.game-stage[data-node="ABOUT_OPENING"] .reading-hint{color:#272624;}
 .reading-navigation{justify-content:flex-end;}
 .screen-dissolve{position:absolute;top:0;right:0;bottom:0;left:0;z-index:1000;background:#080808;animation:ending-map-dissolve 900ms ease-in-out both;pointer-events:auto;}
 .screen-dissolve .app-shell{width:100%;height:100%;}
