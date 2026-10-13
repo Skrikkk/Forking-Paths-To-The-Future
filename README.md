@@ -2,9 +2,11 @@
 游戏版本：AMD#1.0（2026-10-13）。
 [在线试玩](https://skrikkk.github.io/jianglai-vn-demo/) · [小红书手机横屏版 ZIP 下载](https://skrikkk.github.io/jianglai-vn-demo/releases/)
 
-小径分岔的未来
-Forking Paths To The Future
+----------------------
+**小径分岔的未来**
 
+**Forking Paths To The Future**
+-----------------------
 “穿过可能性的花园，成为自己。”
 
 这个游戏的灵感来自于博尔赫斯的短篇小说《小径分岔的花园》：这个故事重要的美学特征之一，就是时间在意识概念中的非线性。我们说出“将来”的时刻，依旧是此刻；我们对于“将来”的祝福，已经是未来。
@@ -15,6 +17,5 @@ Forking Paths To The Future
 
 
 
-
-#下载仓库后须保留完整目录，可直接打开根目录index.html；HTTP入口会先加载运行资源。
-#未经允许，禁止使用本游戏素材。
+-----------------------
+#下载仓库后须保留完整目录，可直接打开根目录index.html；HTTP入口会先加载运行资源。未经允许，禁止使用本游戏素材。
