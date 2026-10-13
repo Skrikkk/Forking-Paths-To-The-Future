@@ -1,9 +1,0 @@
-.env
-.env.*
-!.env.example
-node_modules/
-.local/
-*.log
-*.tmp
-/dist/menu-preview.png
-.codex/archive.json

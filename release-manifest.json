@@ -1,0 +1,232 @@
+{
+  "version": "261013 AMD#33",
+  "date": "2026-10-13",
+  "smallredPackage": {
+    "name": "姜崃漫游-小红书手机横屏版-261013-AMD33.zip",
+    "bytes": 4573247,
+    "sha256": "d39663f9f605e721bb005cb5ee72531008807e81b186eee8d7a8a5455511577b",
+    "download": "releases/"
+  },
+  "files": [
+    {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1298,
+      "sha256": "2d8aa5799c7f524fc7adf72d37a6d13eab8448f063c5f8797c379a9090531adf"
+    },
+    {
+      "path": "dist/app.js",
+      "bytes": 87680,
+      "sha256": "e027df04f11ce6bd630612a61aeec70e326dfc048d89b18419a770bc06b6acec"
+    },
+    {
+      "path": "dist/assets/audio/garden.mp3",
+      "bytes": 1132283,
+      "sha256": "d40fa6e4186c08e146820bf3ad1e5b028c40dd8b7120ea9956a8f6919c82ce6b"
+    },
+    {
+      "path": "dist/assets/audio/true-end.mp3",
+      "bytes": 718074,
+      "sha256": "a4b78f5405bdeebd4f18b97eadedd132768de9cfc7dd4509ff73ad6bdb16c816"
+    },
+    {
+      "path": "dist/assets/covers/cover-1.png",
+      "bytes": 1898257,
+      "sha256": "e0857c68bd97f02e9f27feee0cc8f220edcf6bbbbe29d1c6a04b9f69610d8698"
+    },
+    {
+      "path": "dist/assets/covers/cover-2.png",
+      "bytes": 3506702,
+      "sha256": "5cf4e1f1a6217068b959d4d9b64040d00ec285c1494526cd289075fa99941d1b"
+    },
+    {
+      "path": "dist/assets/covers/menu-options.png",
+      "bytes": 1898257,
+      "sha256": "e0857c68bd97f02e9f27feee0cc8f220edcf6bbbbe29d1c6a04b9f69610d8698"
+    },
+    {
+      "path": "dist/assets/fonts/FONT-LICENSE.txt",
+      "bytes": 359,
+      "sha256": "8eb7a84917ae3e3c28fad6a9a22c793cff1d9d48d7db77399a8f1dd16fa89147"
+    },
+    {
+      "path": "dist/assets/fonts/GenWanMin2TC-M.woff2",
+      "bytes": 312404,
+      "sha256": "a4b9b22b8eef604dd102083c2973411c10cdff23be177ac069774e172738ef9b"
+    },
+    {
+      "path": "dist/assets/scenes/1.png",
+      "bytes": 2091841,
+      "sha256": "a7a1a42a62fff5e62f352b6ac447d0e22101ece68145713893b60ea502c4e841"
+    },
+    {
+      "path": "dist/assets/scenes/2.png",
+      "bytes": 2038259,
+      "sha256": "b4967fc989bb3ff6376138f036349204149c0b3d72b92dc244c4757b4aa2a07c"
+    },
+    {
+      "path": "dist/assets/scenes/3.png",
+      "bytes": 1770035,
+      "sha256": "25d04bbba70bbc0441f1d99124df9945d82389009f2770339a157e27875b3d2b"
+    },
+    {
+      "path": "dist/assets/scenes/4.png",
+      "bytes": 1751386,
+      "sha256": "3e0fd4f9d4b4c27a8cd47b050db9c5d8d5106231f0a019425c199ff3c4e26128"
+    },
+    {
+      "path": "dist/assets/scenes/5.png",
+      "bytes": 2151094,
+      "sha256": "5f416c98f23a0965bc06249b31cd3941fc4eda0875b655097ab5f233fc6b23e8"
+    },
+    {
+      "path": "dist/assets/scenes/6.png",
+      "bytes": 2112074,
+      "sha256": "4d90c340310680a7a2b979aafff45bf3a19007337177599bd3b84ef58b5296da"
+    },
+    {
+      "path": "dist/assets/scenes/7.png",
+      "bytes": 1942528,
+      "sha256": "80c728b9f6701df23e23ed1c6470027c5d69372e87b153060b5988048bf3d23b"
+    },
+    {
+      "path": "dist/assets/scenes/ending-E1.png",
+      "bytes": 1203396,
+      "sha256": "758eb11d5c57d133936d115301799e8021a9abb4e31a61bd4df01a09ae62e52a"
+    },
+    {
+      "path": "dist/assets/scenes/ending-E2.png",
+      "bytes": 546395,
+      "sha256": "857c859a432e79d906a834be592241e0f7193f4a4905ce7a3cbe788941fc036c"
+    },
+    {
+      "path": "dist/assets/scenes/ending-E3.png",
+      "bytes": 848025,
+      "sha256": "ad290577805a130e61242aa8c639fbbf3f262b9f945cc815534897a20a34ba7e"
+    },
+    {
+      "path": "dist/assets/scenes/ending-E4.png",
+      "bytes": 1812871,
+      "sha256": "a4b6a44455a8771fa6a675457fbd16075a6abd15988123322161d369ce52c1bf"
+    },
+    {
+      "path": "dist/assets/scenes/ending-paper.png",
+      "bytes": 550341,
+      "sha256": "2adba3ee041b7d76dce825c6fe0a7c80bc20327781b184d877373c56aa7e9506"
+    },
+    {
+      "path": "dist/assets/scenes/intro-montage.png",
+      "bytes": 2571748,
+      "sha256": "30e676e8fa119b539f47db97fb70c2d955d48d3f84007398e0c61ceb039b0449"
+    },
+    {
+      "path": "dist/assets/ui/book-background-32.png",
+      "bytes": 2982365,
+      "sha256": "8eebf461c19b29ebdb6075cb55ac0252afd469e4e553c9e287afc7c434241bce"
+    },
+    {
+      "path": "dist/assets/ui/choice-chosen.png",
+      "bytes": 23314,
+      "sha256": "545039441ac6b652d6b1a1b4e2ea115ed587c9ee944496f54ba1df1a164737d1"
+    },
+    {
+      "path": "dist/assets/ui/choice-normal.png",
+      "bytes": 23434,
+      "sha256": "e41d54c5bfa7866c4262660e42e857b9808d8a79de34975418c59b7f62e7d13e"
+    },
+    {
+      "path": "dist/assets/ui/choice-selected.png",
+      "bytes": 21056,
+      "sha256": "3c75edd021ddfcbdddf49cf06b0d3287a5e06c5ad617b9cef3034e0bc3454140"
+    },
+    {
+      "path": "dist/assets/ui/flow-floral.png",
+      "bytes": 968023,
+      "sha256": "d900587ffafd63f4db9f9f446d8a3425877b3f44e5f79f9ea86c09206ee37e00"
+    },
+    {
+      "path": "dist/assets/ui/illustration-floral.png",
+      "bytes": 390639,
+      "sha256": "92fa9c6d32d62af920b7bbaff5b1f014dcbc0ad0d55cb711de5b4b08e0962e4f"
+    },
+    {
+      "path": "dist/assets/ui/illustration-frame.png",
+      "bytes": 165414,
+      "sha256": "46b20cface6a7d7e5901c4d4a90043c43de056a46b77606bf4949d3b0ab00a55"
+    },
+    {
+      "path": "dist/assets/ui/illustration-gold.png",
+      "bytes": 45949,
+      "sha256": "e42cfb6a22dff7a71d3724307554f9cfc40412bd106eca9626bb087f0ad5fb79"
+    },
+    {
+      "path": "dist/assets/ui/intro-ground.png",
+      "bytes": 8192,
+      "sha256": "64cdfa2dd919d83e275488dd291eb77df88615f6bace9464d75cf96013196317"
+    },
+    {
+      "path": "dist/assets/ui/preface-background.png",
+      "bytes": 2128701,
+      "sha256": "c594c91ecaefd633cd81912cb0f17ecfa2a34166b377ed09f9cc5d538f98d1d4"
+    },
+    {
+      "path": "dist/assets/ui/save-background.png",
+      "bytes": 329087,
+      "sha256": "218edc391c3ecc258bd21fc81a7b27dd5cedd8b0c886b1264de1e624c6e96eea"
+    },
+    {
+      "path": "dist/assets/ui/save-empty.png",
+      "bytes": 660295,
+      "sha256": "f080b57069f874605f0536a3b5ed1fd521164e7ce45978a201c8d14253e17107"
+    },
+    {
+      "path": "dist/assets/ui/save-filled.png",
+      "bytes": 753656,
+      "sha256": "b582ddb70caf9768d28dcb10212e84f31996daef59d9655eca0e3b5475646801"
+    },
+    {
+      "path": "dist/index.html",
+      "bytes": 673,
+      "sha256": "ff4da2f6fe1c936e3764d87ceb943cce140d9f0e4a8985d54537c354ca940f3d"
+    },
+    {
+      "path": "dist/name-ink.js",
+      "bytes": 1753,
+      "sha256": "d31a4ee85385afefaa01678df6c7e3778825f2aa91365b608298e990a6c3ed94"
+    },
+    {
+      "path": "dist/styles.css",
+      "bytes": 24479,
+      "sha256": "43b228ebccb529996be058aee3dfa7d1314861f4c30e914272574173f2916ee1"
+    },
+    {
+      "path": "dist/ui-261006.css",
+      "bytes": 46401,
+      "sha256": "316ca1936b2fad976ecbecc755a7712eeb8904d2b023abd466b62eb48e12301a"
+    },
+    {
+      "path": "index.html",
+      "bytes": 397,
+      "sha256": "c7afe4690f2a319710ea0305b21a3a3b5d3a2eb62727cadf666d1038646d6648"
+    },
+    {
+      "path": "releases/index.html",
+      "bytes": 1972,
+      "sha256": "7e4bdef4408fff56181a965443d2fd9dce99f65622178edd84d41f21ba8ad191"
+    },
+    {
+      "path": "releases/minitool-261013-AMD33.zip.part1",
+      "bytes": 2250000,
+      "sha256": "b7e921e8b0bf6195bdc0cc9c44d488a3186b89121778e43e9fdd97440ce2e0ed"
+    },
+    {
+      "path": "releases/minitool-261013-AMD33.zip.part2",
+      "bytes": 2323247,
+      "sha256": "d6a210574665d8909bc25ae055384819d1fd919a6ef4ea7fdb071271d614827e"
+    }
+  ]
+}

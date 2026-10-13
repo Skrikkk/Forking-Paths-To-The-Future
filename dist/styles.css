@@ -192,7 +192,7 @@ body { background: radial-gradient(circle at 50% 38%, #d2e1e7, #8cacc4 70%, #6c8
 .rail-button:hover, .rail-button:focus-visible { color: #a54d6c; background: #eef4f4a8; outline: 2px solid #526f8b; outline-offset: 1px; }
 .rail-button:disabled { opacity: .36; cursor: default; }
 .book-rail .node-label { margin-top: auto; color: #3c5a73; font-size: .72rem; writing-mode: vertical-rl; max-height: 8rem; overflow: hidden; }
-.book-spread { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); min-width: 0; min-height: 0; overflow: hidden; border: 3px solid #5f3537; border-radius: 3.5rem 2rem 1.75rem 3rem / 1.2rem 1rem 1.1rem 1.3rem; background: #fff8ea; box-shadow: 0 6px 0 #3c2c36, 0 12px 0 #e4dbcc, 0 18px 24px #1a364c85; animation: spread-enter .32s ease both; }
+.book-spread { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); min-width: 0; min-height: 0; overflow: hidden; border: 3px solid #5f3537; border-radius: 3.5rem 2rem 1.75rem 3rem / 1.2rem 1rem 1.1rem 1.3rem; background: #fff8ea; box-shadow: 0 6px 0 #3c2c36, 0 12px 0 #e4dbcc, 0 18px 24px #1a364c85; }
 .book-page { min-width: 0; min-height: 0; }
 .illustration-page { display: grid; place-items: center; padding: clamp(.5rem, 1.1vw, 1rem); background: #edf0ed; border-right: 2px solid #aa9a8c; box-shadow: inset -14px 0 20px #4e3b3a24; overflow: hidden; }
 .illustration-page { position: relative; }
@@ -228,6 +228,14 @@ body { background: radial-gradient(circle at 50% 38%, #d2e1e7, #8cacc4 70%, #6c8
 
 @keyframes cover-enter { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes spread-enter { from { opacity: .7; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+.book-enter { animation: spread-enter .32s ease both; }
+.page-turn { transform-origin: left center; animation: reading-turn .26s ease both; }
+@keyframes reading-turn { from { opacity: .3; transform: perspective(900px) rotateY(-7deg); } to { opacity: 1; transform: none; } }
+.reading-letter.unrevealed { opacity: 0; }
+.dialogue-controls[hidden], .reading-navigation button[hidden] { display: none; }
+.reading-navigation { display: flex; justify-content: space-between; align-items: center; gap: .6rem; flex: none; min-height: 2rem; padding-top: .35rem; color: #8c6d71; font-size: .75rem; }
+.motion-off .book-enter, .motion-off .page-turn, .motion-off .choice, .motion-off .menu-cover { animation: none; }
+@media (prefers-reduced-motion: reduce) { .book-enter, .page-turn { animation: none; } }
 @keyframes option-enter { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
 @media (prefers-reduced-motion: reduce) { .menu-cover, .book-spread, .choice { animation: none; } }
 
