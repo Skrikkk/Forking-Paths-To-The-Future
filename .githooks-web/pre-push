@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+# 261013 AMD#1 — scoped PC AMD33 public test publication.
+set -eu
+node .githooks-web/check.mjs "$2"
